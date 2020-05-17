@@ -8,6 +8,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     if req.path.match(/items/)
+      @@item << Item.new(name, price)
       i = @@item.last
       resp.write "#{i.price}"
     else 
