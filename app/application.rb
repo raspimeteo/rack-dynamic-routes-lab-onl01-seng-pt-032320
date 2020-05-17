@@ -7,7 +7,7 @@ class Application
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
-    if req.path.match(/items/)
+    if req.path.match(/items\/.+/)
       iterm_term = req.params["q"]
       puts iterm_term
       puts name
