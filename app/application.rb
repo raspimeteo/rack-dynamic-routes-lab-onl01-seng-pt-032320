@@ -13,6 +13,7 @@ class Application
         resp.write item.price
       else
         return [ 400, {'Content-Type' => 'text/html'}, "Item not found" ]
+      end
     else 
       return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
     end
