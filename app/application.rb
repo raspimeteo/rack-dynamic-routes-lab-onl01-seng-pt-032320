@@ -10,7 +10,7 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       item = @@items.detect { |i| i.name == item_name }
-      resp.write "#{i.price}"
+      resp.write "#{item.price}"
     else 
       return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
     end
