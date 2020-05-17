@@ -8,7 +8,6 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     if req.path.match(/items/)
-      item_info = req.path.split("/songs/").last #turn /songs/Sorry into Sorry
       item = Item.new(name, price)
       @@item << item
       for @@item.each do |i|
