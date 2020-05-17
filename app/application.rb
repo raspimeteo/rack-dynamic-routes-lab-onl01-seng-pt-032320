@@ -8,7 +8,7 @@ class Application
       item = Item.new
       resp.write "#{item.name} #{item.price}"
     else 
-      return [ 400, {'Content-Type' => 'text/html'}, "Route not found" ]
+      return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
     end
 	 
 	    resp.finish
