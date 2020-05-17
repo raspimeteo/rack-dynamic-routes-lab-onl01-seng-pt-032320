@@ -5,7 +5,7 @@ class Application
     req = Rack::Request.new(env)
     if req.path.match(/items/)
       item_info = req.path.split("/songs/").last #turn /songs/Sorry into Sorry
-      item = Item.new
+      item = Item.new(name, price)
       resp.write "#{item.name} #{item.price}"
     else 
       return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
