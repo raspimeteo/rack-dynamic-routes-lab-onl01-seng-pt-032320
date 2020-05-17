@@ -2,7 +2,7 @@ class Application
   
   attr_accessor :name, :price
   
-  @@item = []
+  @@items = []
 	 
   def call(env)
     resp = Rack::Response.new
