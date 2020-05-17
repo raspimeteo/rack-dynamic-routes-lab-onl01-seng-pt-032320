@@ -10,6 +10,8 @@ class Application
     if req.path.match(/items/)
       @@item << Item.new(name, price)
       i = @@item.last
+      puts @@item
+      puts i
       resp.write "#{i.price}"
     else 
       return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
