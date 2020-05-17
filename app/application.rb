@@ -7,6 +7,7 @@ class Application
       item_info = req.path.split("/songs/").last #turn /songs/Sorry into Sorry
       item = Item.new
       resp.write "#{item.name} #{item.price}"
+    else 
     end
 	 
 	    resp.finish
