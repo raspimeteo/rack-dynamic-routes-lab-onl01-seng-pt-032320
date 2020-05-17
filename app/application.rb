@@ -1,4 +1,3 @@
-require 'pry'
 class Application
   
   attr_accessor :name, :price
