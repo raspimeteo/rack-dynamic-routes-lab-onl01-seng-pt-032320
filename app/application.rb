@@ -8,6 +8,9 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     if req.path.match(/items\/.+/)
+      item_name = req.path.split("/items/").last
+      puts "item_name = #{item_name}"
+      item = @@items.detect { |i| i.name == item_name }
       iterm_term = req.params["q"]
       puts iterm_term
       puts name
