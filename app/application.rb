@@ -11,9 +11,9 @@ class Application
     if req.path.match(/items/)
       item = Item.new(name, price)
       @@item << item
-      for @@item.each do |i|{
+      for @@item.each do |i|
         binding.pry
-        resp.write "#{i.name} #{i.price}"}
+        
       end
     else 
       return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
