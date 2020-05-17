@@ -9,11 +9,8 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
     if req.path.match(/items/)
-      item = Item.new(name, price)
-      @@item << item
-      for @@item.each do |i|
+    for @@item.each do |i|
         binding.pry
-        
       end
     else 
       return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
