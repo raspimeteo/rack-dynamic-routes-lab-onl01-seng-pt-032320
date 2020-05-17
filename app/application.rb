@@ -11,7 +11,7 @@ class Application
       @@item << Item.new(name, price)
       i = @@item.last
       puts @@item
-      puts i.name
+      puts i.price
       resp.write "#{i.price}"
     else 
       return [ 404, {'Content-Type' => 'text/html'}, "Route not found" ]
