@@ -10,6 +10,8 @@ class Application
     if req.path.match(/items/)
       iterm_term = req.params["q"]
       puts iterm_term
+      puts name
+      puts price
       @@item << Item.new(name, price)
       i = @@item.last
       puts @@item
